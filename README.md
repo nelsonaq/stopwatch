@@ -1,4 +1,4 @@
-#Stopwatch
+# Stopwatch
 
 A simple stopwatch timer.
 
