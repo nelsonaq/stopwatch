@@ -85,7 +85,7 @@ body {
   border-radius: 5px;
   font-size: 1.75rem;
   padding: 0.5rem 1rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .btn:hover {
@@ -95,7 +95,7 @@ body {
 
 .btn:active {
   opacity: 0.6;
-  transform: scale(0.95);
+  transform: scale(0.8);
 }
 
 .lap-container {
