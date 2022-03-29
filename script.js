@@ -19,9 +19,13 @@ const updateUI = function () {
   minutes.textContent = `${min}`.padStart(2, "0");
 };
 
+const btnSwapDisplay = function (display, hide) {
+  display.style.display = "block";
+  hide.style.display = "none";
+};
+
 const timerStart = function () {
-  btnStart.style.display = "none";
-  btnStop.style.display = "inline-block";
+  btnSwapDisplay(btnStop, btnStart);
   clearInterval(timerMilliseconds);
   timerMilliseconds = setInterval(() => {
     if (ms === 100) {
@@ -39,14 +43,12 @@ const timerStart = function () {
 
 const timerStop = function () {
   clearInterval(timerMilliseconds);
-  btnStop.style.display = "none";
-  btnStart.style.display = "inline-block";
+  btnSwapDisplay(btnStart, btnStop);
 };
 
 const timerReset = function () {
   clearInterval(timerMilliseconds);
-  btnStop.style.display = "none";
-  btnStart.style.display = "inline-block";
+  btnSwapDisplay(btnStart, btnStop);
   sec = 0;
   ms = 0;
   min = 0;
